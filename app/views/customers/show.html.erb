@@ -1,0 +1,43 @@
+<h1>Export file excel</h1>
+<table class="form_table" style="margin: 0 auto">
+  <tr>
+    <th>First name: </th>
+    <td><%= @customer.first_name %></td>
+  </tr>
+  <tr>
+    <th>Last name: </th>
+    <td><%= @customer.last_name %></td>
+  </tr>
+  <tr>
+    <th>Age: </th>
+    <td><%= @customer.age %></td>
+  </tr>
+  <tr>
+    <th>Tel: </th>
+    <td><%= @customer.tel %></td>
+  </tr>
+  <tr>
+    <th>Address: </th>
+    <td><%= @customer.address %></td>
+  </tr>
+  <tr>
+    <th>Email: </th>
+    <td><%= @customer.email %></td>
+  </tr>
+  <tr>
+    <th>Birth day: </th>
+    <td><%= @customer.birth_day %></td>
+  </tr>
+  <tr>
+    <th>Job: </th>
+    <td><%= @customer.job %></td>
+  </tr>
+  <tr>
+    <%= link_to [@customer, format: :xls] do %>
+      <%= button_tag "Export excel" %>
+    <% end %>
+    <%= link_to edit_customer_path(@customer) do %>
+      <%= button_tag "Edit"%>
+    <% end %>
+  </tr>
+</table>

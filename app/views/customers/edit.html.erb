@@ -1,0 +1,5 @@
+<h1>Import file excel</h1>
+<%= form_for @customer, multipart: true do |f| %>
+  <%= f.file_field :file, size: "70" %>
+  <%= f.submit "import" %>
+<% end %>

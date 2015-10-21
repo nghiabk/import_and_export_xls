@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ID</Data></Cell>
+        <Cell><Data ss:Type="String">First name</Data></Cell>
+        <Cell><Data ss:Type="String">Last name</Data></Cell>
+        <Cell><Data ss:Type="String">Age</Data></Cell>
+        <Cell><Data ss:Type="String">Addess</Data></Cell>
+        <Cell><Data ss:Type="String">Tel</Data></Cell>
+        <Cell><Data ss:Type="String">Email</Data></Cell>
+        <Cell><Data ss:Type="String">Birth day</Data></Cell>
+        <Cell><Data ss:Type="String">Job</Data></Cell>
+      </Row>
+    <% @customers.each do |customer| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= customer.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= customer.first_name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= customer.last_name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= customer.age %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= customer.address %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= customer.tel %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= customer.email %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= customer.birth_day %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= customer.job %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
